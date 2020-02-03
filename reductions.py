@@ -203,8 +203,6 @@ def __block_max_reduce(val, size, shared):
 def __max(_in, _out, size):
 	start  = cuda.grid(1)
 	stride = cuda.gridsize(1)
-	# size   = _in.size
-	# math.isnan()
 
 	s_shape = 32
 	shared  = cuda.shared.array(shape = s_shape, dtype = float64)
